@@ -70,5 +70,11 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaskManagerWeb\TaskManagerWeb.csproj">
+      <Project>{34B1DFAD-A7F0-4C51-89AA-0F5CCBB04096}</Project>
+      <Name>TaskManagerWeb</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
