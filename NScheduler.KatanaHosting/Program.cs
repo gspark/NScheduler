@@ -1,17 +1,16 @@
 ﻿using Microsoft.Owin.Hosting;
-using System;
-using Owin;
 using Owin_Nancy;
+using System;
 
 namespace NScheduler.KatanaHosting
 {
-//    public class Startup
-//    {
-//        public void Configuration(IAppBuilder app)
-//        {
-//            app.UseNancy();
-//        }
-//    }
+    //    public class Startup
+    //    {
+    //        public void Configuration(IAppBuilder app)
+    //        {
+    //            app.UseNancy();
+    //        }
+    //    }
 
     class Program
     {
