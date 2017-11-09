@@ -47,7 +47,7 @@ namespace Ywdsoft.Modules
                 ConfigViewModel configModel = null;
                 foreach (var item in list)
                 {
-                    configModel = Mapper.Map<OptionViewModel, ConfigViewModel>(item);
+                    configModel = Mapper.DynamicMap<OptionViewModel, ConfigViewModel>(item);
                     configModel.TagList = listTags.Where(e => e.SourceId == item.Group.GroupType).ToList();
                     listDto.Add(configModel);
                 }
@@ -63,7 +63,7 @@ namespace Ywdsoft.Modules
             {
                 string GroupType = Request.Query["GroupType"].ToString();
                 var model = manager.GetOptionByGroup(GroupType);
-                ConfigViewModel configModel = Mapper.Map<OptionViewModel, ConfigViewModel>(model);
+                ConfigViewModel configModel = Mapper.DynamicMap<OptionViewModel, ConfigViewModel>(model);
                 ITagService tagService = MefConfig.TryResolve<ITagService>();
                 configModel.TagList = tagService.GetTags(TagsSourceType.ConfigHandler, GroupType);
                 return Response.AsJson(configModel);
@@ -87,7 +87,7 @@ namespace Ywdsoft.Modules
                     //保存标签
                     tagService.SaveTags(value.TagList, TagsSourceType.ConfigHandler, value.Group.GroupType, "admin");
                 }
-                return Response.AsJson(manager.Save(Mapper.Map<ConfigViewModel, OptionViewModel>(value)));
+                return Response.AsJson(manager.Save(Mapper.DynamicMap<ConfigViewModel, OptionViewModel>(value)));
             };
 
             #endregion

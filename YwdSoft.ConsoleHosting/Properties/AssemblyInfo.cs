@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("TaskManagerWeb")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Ywdsoft.ConsoleHosting")]
+[assembly: AssemblyDescription("任务管理容器TaskManager")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TaskManagerWeb")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCompany("焰尾迭：http://yanweidie.cnblogs.com")]
+[assembly: AssemblyProduct("Ywdsoft.ConsoleHosting")]
+[assembly: AssemblyCopyright("Copyright 焰尾迭©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("ff2274df-e2d0-4e7a-a6ac-4f0d6e7668a7")]
+[assembly: Guid("d3df0ff9-f2f0-4b84-86b8-b4909b4a0f84")]
 
 // 程序集的版本信息由下面四个值组成:
 //

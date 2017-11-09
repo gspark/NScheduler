@@ -55,7 +55,7 @@ namespace Ywdsoft.Modules
                     ContentType = "application/msexcel",
                     StatusCode = HttpStatusCode.OK,
                     Headers = new Dictionary<string, string> {
-                        { "Content-Disposition", string.Format("attachment;filename={0}", System.Net.WebUtility.UrlEncode(info.FileName)) },
+                        { "Content-Disposition", string.Format("attachment;filename={0}", System.Web.HttpUtility.UrlPathEncode(info.FileName)) },
                         {"Content-Length",  msbyte.Length.ToString()}
                     }
                 };
@@ -95,7 +95,7 @@ namespace Ywdsoft.Modules
                             ContentType = MimeHelper.GetMineType(path),
                             StatusCode = HttpStatusCode.OK,
                             Headers = new Dictionary<string, string> {
-                                { "Content-Disposition", string.Format("attachment;filename={0}", System.Net.WebUtility.UrlEncode(FileName)) }
+                                { "Content-Disposition", string.Format("attachment;filename={0}", System.Web.HttpUtility.UrlPathEncode(FileName)) }
                             }
                         };
 

@@ -37,7 +37,7 @@ namespace Ywdsoft.Modules
                     ContentType = MimeHelper.GetMineType(FileName),
                     StatusCode = HttpStatusCode.OK,
                     Headers = new Dictionary<string, string> {
-                                { "Content-Disposition", string.Format("attachment;filename={0}", System.Net.WebUtility.UrlEncode(FileName)) }
+                                { "Content-Disposition", string.Format("attachment;filename={0}", System.Web.HttpUtility.UrlPathEncode(FileName)) }
                             }
                 };
             };
@@ -115,7 +115,7 @@ namespace Ywdsoft.Modules
                     ContentType = MimeHelper.GetMineType(FileName),
                     StatusCode = HttpStatusCode.OK,
                     Headers = new Dictionary<string, string> {
-                                { "Content-Disposition", string.Format("attachment;filename={0}", System.Net.WebUtility.UrlEncode(FileName)) }
+                                { "Content-Disposition", string.Format("attachment;filename={0}", System.Web.HttpUtility.UrlPathEncode(FileName)) }
                     }
                 };
             };
@@ -137,7 +137,7 @@ namespace Ywdsoft.Modules
                     ContentType = MimeHelper.GetMineType(FileName),
                     StatusCode = HttpStatusCode.OK,
                     Headers = new Dictionary<string, string> {
-                                { "Content-Disposition", string.Format("attachment;filename={0}", System.Net.WebUtility.UrlEncode(FileName)) }
+                                { "Content-Disposition", string.Format("attachment;filename={0}", System.Web.HttpUtility.UrlPathEncode(FileName)) }
                             }
                 };
             };
