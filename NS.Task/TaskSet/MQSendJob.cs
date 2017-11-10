@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Quartz;
 using NS.Model.RabbitMQ;
+using NS.Utility.Logger;
+using NS.Utility.RabbitMQ;
 
 namespace NS.Task.TaskSet
 {

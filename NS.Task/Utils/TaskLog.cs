@@ -1,4 +1,6 @@
-﻿namespace NS.Task.Utils
+﻿using NS.Utility.Logger;
+
+namespace NS.Task.Utils
 {
     /// <summary>
     /// 获取任务记录日志ILog

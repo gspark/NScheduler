@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.XmlCommand", "NS.XmlComm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.ConsoleHosting", "NS.ConsoleHosting\NS.ConsoleHosting.csproj", "{C66F78BC-2BF1-4DE5-9105-84BF8EA0C659}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.Task", "Ywdsoft.Task\NS.Task.csproj", "{BAB31070-DA41-4EEF-BBC0-659B6B2C7B43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.Task", "NS.Task\NS.Task.csproj", "{BAB31070-DA41-4EEF-BBC0-659B6B2C7B43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,5 @@
 ﻿using System;
+using NS.Utility.Logger;
 using Quartz;
 
 namespace NS.Task.TaskSet
