@@ -225,6 +225,10 @@
       <Project>{8f936e5f-f5f4-43a4-8624-dab5d4128049}</Project>
       <Name>NS.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NS.Service\NS.Service.csproj">
+      <Project>{691817D2-1E85-4C90-BA6A-DB21B7FB4080}</Project>
+      <Name>NS.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NS.Utility\NS.Utility.csproj">
       <Project>{d2aaedff-9f30-49a6-b242-f655503c24f3}</Project>
       <Name>NS.Utility</Name>
