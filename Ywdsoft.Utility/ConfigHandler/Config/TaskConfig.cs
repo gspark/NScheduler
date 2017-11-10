@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.Composition;
 
-namespace Ywdsoft.Utility.ConfigHandler
+namespace NS.Utility.ConfigHandler.Config
 {
     /// <summary>
     /// 任务配置信息

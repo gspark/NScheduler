@@ -8,7 +8,7 @@ using NPOI.HSSF.Util;
 using NPOI.SS.UserModel;
 using NPOI.SS.Util;
 
-namespace Ywdsoft.Utility.Excel
+namespace NS.Utility.Excel
 {
     /// <summary>
     /// NPOI操作EXECL帮助类
@@ -159,7 +159,7 @@ namespace Ywdsoft.Utility.Excel
         /// <returns>Sheet</returns>
         public static ISheet GetFirstSheet(string filePath)
         {
-            using (Stream stream = new MemoryStream(File.ReadAllBytes(filePath)))
+            using (Stream stream = new MemoryStream(System.IO.File.ReadAllBytes(filePath)))
             {
                 IWorkbook workbook = new HSSFWorkbook(stream);
                 if (workbook.NumberOfSheets > 0)

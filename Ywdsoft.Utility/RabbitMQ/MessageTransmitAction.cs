@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Ywdsoft.Utility.RabbitMQ
+namespace NS.Utility.RabbitMQ
 {
     public abstract class MessageTransmitAction
     {

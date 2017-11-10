@@ -4,15 +4,17 @@
  * Author: 杜冬军
  * Created: 2016/8/15 9:50:23 
  */
-using Ywdsoft.Utility.Auth;
-using NPOI.SS.UserModel;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using NPOI.SS.UserModel;
+using NS.Utility.Auth;
+using NS.Utility.File;
 
-namespace Ywdsoft.Utility.Excel
+namespace NS.Utility.Excel
 {
     /// <summary>
     /// excel导入处理
@@ -55,7 +57,7 @@ namespace Ywdsoft.Utility.Excel
         {
             byte[] m_buffer = new byte[BUFFER_SIZE];
             int count = 0;
-            using (FileStream fs = File.OpenRead(FilePath))
+            using (FileStream fs = System.IO.File.OpenRead(FilePath))
             {
                 do
                 {
@@ -384,7 +386,7 @@ namespace Ywdsoft.Utility.Excel
             string relativePath = string.Format("/TempFile/ErrorExcel/{0}{1}{2}", name, DateTime.Now.ToString("MMddHHmmss"), ext);
             string path = FileHelper.GetAbsolutePath(relativePath);
 
-            using (FileStream fs = File.OpenWrite(path))
+            using (FileStream fs = System.IO.File.OpenWrite(path))
             {
                 wb.Write(fs);
             }

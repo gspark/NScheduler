@@ -7,8 +7,9 @@
 
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using NS.Utility.DB;
 
-namespace Ywdsoft.Utility.ConfigHandler
+namespace NS.Utility.ConfigHandler
 {
     /// <summary>
     /// 系统配置接口

@@ -1,4 +1,4 @@
-﻿namespace Ywdsoft.Utility
+﻿namespace NS.Utility.Tags
 {
     /// <summary>
     /// 标签源

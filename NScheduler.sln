@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagerWeb", "TaskManagerWeb\TaskManagerWeb.csproj", "{34B1DFAD-A7F0-4C51-89AA-0F5CCBB04096}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.TaskManagerWeb", "TaskManagerWeb\NS.TaskManagerWeb.csproj", "{34B1DFAD-A7F0-4C51-89AA-0F5CCBB04096}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper.SimpleCRUD", "Dapper.SimpleCRUD\Dapper.SimpleCRUD.csproj", "{B8DFFA5B-823E-48F2-B271-8374438F40BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ywdsoft.Utility", "Ywdsoft.Utility\Ywdsoft.Utility.csproj", "{D2AAEDFF-9F30-49A6-B242-F655503C24F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.Utility", "Ywdsoft.Utility\NS.Utility.csproj", "{D2AAEDFF-9F30-49A6-B242-F655503C24F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YwdSoft.Service", "YwdSoft.Service\YwdSoft.Service.csproj", "{691817D2-1E85-4C90-BA6A-DB21B7FB4080}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.Service", "YwdSoft.Service\NS.Service.csproj", "{691817D2-1E85-4C90-BA6A-DB21B7FB4080}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ywdsoft.Model", "Ywdsoft.Model\Ywdsoft.Model.csproj", "{8F936E5F-F5F4-43A4-8624-DAB5D4128049}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.Model", "Ywdsoft.Model\NS.Model.csproj", "{8F936E5F-F5F4-43A4-8624-DAB5D4128049}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YwdSoft.ConsoleHosting", "YwdSoft.ConsoleHosting\YwdSoft.ConsoleHosting.csproj", "{C66F78BC-2BF1-4DE5-9105-84BF8EA0C659}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.ConsoleHosting", "YwdSoft.ConsoleHosting\NS.ConsoleHosting.csproj", "{C66F78BC-2BF1-4DE5-9105-84BF8EA0C659}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ywdsoft.XmlCommand", "Ywdsoft.XmlCommand\Ywdsoft.XmlCommand.csproj", "{9F25A64E-EE14-42B0-9CBD-0AFBEADC3183}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.XmlCommand", "Ywdsoft.XmlCommand\NS.XmlCommand.csproj", "{9F25A64E-EE14-42B0-9CBD-0AFBEADC3183}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

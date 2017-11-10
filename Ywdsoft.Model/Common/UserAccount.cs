@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ywdsoft.Model.Common
+namespace NS.Model.Common
 {
     /// <summary>
     /// 用户基础信息

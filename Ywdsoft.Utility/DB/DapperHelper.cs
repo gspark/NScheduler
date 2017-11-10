@@ -1,9 +1,10 @@
-﻿using Dapper;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using Dapper;
+using NS.Utility.Config;
 
-namespace Ywdsoft.Utility.DB
+namespace NS.Utility.DB
 {
     /// <summary>
     /// Dapper再次封装

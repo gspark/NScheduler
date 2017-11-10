@@ -1,6 +1,7 @@
 ﻿using System;
+using NS.Utility.Logger;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Admin
 {
     public class AdminRun
     {

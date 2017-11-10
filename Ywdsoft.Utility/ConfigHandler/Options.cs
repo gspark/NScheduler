@@ -7,7 +7,7 @@
 
 using System.Collections.Generic;
 
-namespace Ywdsoft.Utility.ConfigHandler
+namespace NS.Utility.ConfigHandler
 {
     ///<summary>
     ///系统参数配置选项表

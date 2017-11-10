@@ -1,8 +1,8 @@
-﻿using System;
-using System.ComponentModel.Composition;
-using Ywdsoft.Model.Common;
+﻿using System.ComponentModel.Composition;
+using NS.Model.Common;
+using NS.Utility.DB;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Auth
 {
     /// <summary>
     /// 用户服务接口

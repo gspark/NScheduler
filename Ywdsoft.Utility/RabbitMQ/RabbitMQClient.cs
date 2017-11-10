@@ -1,16 +1,17 @@
-﻿using Newtonsoft.Json;
-using RabbitMQ.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using Ywdsoft.Model.RabbitMQ;
-using Ywdsoft.Utility.ConfigHandler;
-using Ywdsoft.Utility.Mef;
+using Newtonsoft.Json;
+using NS.Model.RabbitMQ;
+using NS.Utility.ConfigHandler.Config;
+using NS.Utility.Logger;
+using NS.Utility.Mef;
+using RabbitMQ.Client;
 
-namespace Ywdsoft.Utility.RabbitMQ
+namespace NS.Utility.RabbitMQ
 {
     /// <summary>
     /// 全局RabbitMQ消息处理

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Ywdsoft.Utility.Mef;
+using NS.Utility.Mef;
 
-namespace Ywdsoft.Utility.Command
+namespace NS.Utility.Command
 {
     /// <summary>
     /// 系统命令初始化构造器

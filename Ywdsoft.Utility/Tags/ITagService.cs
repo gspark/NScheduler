@@ -10,9 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
-using Ywdsoft.Model.Common;
+using NS.Utility.DB;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Tags
 {
     /// <summary>
     /// 自定义标签服务接口
@@ -24,7 +24,7 @@ namespace Ywdsoft.Utility
         /// </summary>
         /// <param name="SourceType">来源类型 <seealso cref="TagsSourceType"/></param>
         /// <returns>自定义标签</returns>
-        List<Tags> GetTags(string SourceType);
+        List<Model.Common.Tags> GetTags(string SourceType);
 
         /// <summary>
         /// 通过来源类型获取自定义标签
@@ -32,7 +32,7 @@ namespace Ywdsoft.Utility
         /// <param name="SourceType">来源类型 <seealso cref="TagsSourceType"/></param>
         /// <param name="SourceId">来源Id</param>
         /// <returns>自定义标签</returns>
-        List<Tags> GetTags(string SourceType, string SourceId);
+        List<Model.Common.Tags> GetTags(string SourceType, string SourceId);
 
         /// <summary>
         /// 保存同一类标签
@@ -41,7 +41,7 @@ namespace Ywdsoft.Utility
         /// <param name="SourceType">来源类型 <seealso cref="TagsSourceType"/></param>
         /// <param name="operatorCode">操作人</param>
         /// <returns>影响条数</returns>
-        int SaveTags(List<Tags> tagsList, string SourceType, string operatorCode);
+        int SaveTags(List<Model.Common.Tags> tagsList, string SourceType, string operatorCode);
 
         /// <summary>
         /// 保存同一类标签
@@ -51,7 +51,7 @@ namespace Ywdsoft.Utility
         /// <param name="SourceId">来源Id</param>
         /// <param name="operatorCode">操作人</param>
         /// <returns>影响条数</returns>
-        int SaveTags(List<Tags> tagsList, string SourceType, string SourceId, string operatorCode);
+        int SaveTags(List<Model.Common.Tags> tagsList, string SourceType, string SourceId, string operatorCode);
 
         /// <summary>
         /// 删除某个类别所有标签
@@ -87,7 +87,7 @@ namespace Ywdsoft.Utility
         /// </summary>
         /// <param name="SourceType">来源类型 <seealso cref="TagsSourceType"/></param>
         /// <returns>自定义标签</returns>
-        public List<Tags> GetTags(string SourceType)
+        public List<Model.Common.Tags> GetTags(string SourceType)
         {
             return GetTags(SourceType, null);
         }
@@ -98,11 +98,11 @@ namespace Ywdsoft.Utility
         /// <param name="SourceType">来源类型 <seealso cref="TagsSourceType"/></param>
         /// <param name="SourceId">来源Id</param>
         /// <returns>自定义标签</returns>
-        public List<Tags> GetTags(string SourceType, string SourceId)
+        public List<Model.Common.Tags> GetTags(string SourceType, string SourceId)
         {
             if (string.IsNullOrEmpty(SourceType))
             {
-                return new List<Tags>();
+                return new List<Model.Common.Tags>();
             }
             string strSQL = "SELECT * FROM p_Tags WHERE TagType=@SourceType  AND 1=1 ORDER BY TagHeat DESC";
 
@@ -111,7 +111,7 @@ namespace Ywdsoft.Utility
                 strSQL = strSQL.Replace("1=1", " SourceId = @SourceId ");
             }
 
-            return SQLHelper.ToList<Tags>(strSQL, new { SourceType = SourceType, SourceId = SourceId });
+            return SQLHelper.ToList<Model.Common.Tags>(strSQL, new { SourceType = SourceType, SourceId = SourceId });
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace Ywdsoft.Utility
         /// <param name="tagsList">标签列表</param>
         /// <param name="SourceType">来源类型 <seealso cref="TagsSourceType"/></param>
         /// <param name="operatorCode">操作人</param>
-        public int SaveTags(List<Tags> tagsList, string SourceType, string operatorCode)
+        public int SaveTags(List<Model.Common.Tags> tagsList, string SourceType, string operatorCode)
         {
             return SaveTags(tagsList, SourceType, null, operatorCode);
         }
@@ -132,14 +132,14 @@ namespace Ywdsoft.Utility
         /// <param name="SourceType">来源类型 <seealso cref="TagsSourceType"/></param>
         /// <param name="SourceId">来源Id</param>
         /// <param name="operatorCode">操作人</param>
-        public int SaveTags(List<Tags> tagsList, string SourceType, string SourceId, string operatorCode)
+        public int SaveTags(List<Model.Common.Tags> tagsList, string SourceType, string SourceId, string operatorCode)
         {
             if (string.IsNullOrEmpty(SourceType) || tagsList == null || tagsList.Count == 0)
             {
                 return -1;
             }
             var allTagList = GetTags(SourceType);
-            List<Tags> list = null;
+            List<Model.Common.Tags> list = null;
             if (!string.IsNullOrEmpty(SourceId))
             {
                 list = GetTags(SourceType, SourceId);
@@ -175,7 +175,7 @@ namespace Ywdsoft.Utility
                 item.Creator = operatorCode;
             }
             int change = 0;
-            SQLHelper.BatchSaveData<Tags>(queryAdd, "p_Tags");
+            SQLHelper.BatchSaveData<Model.Common.Tags>(queryAdd, "p_Tags");
             change = SQLHelper.ExecuteNonQuery("DELETE FROM p_Tags WHERE TagGUID in('" + string.Join("','", queryRemove) + "')");
             return change;
         }

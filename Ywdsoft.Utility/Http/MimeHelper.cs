@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.IO;
 
-namespace Ywdsoft.Utility.Http
+namespace NS.Utility.Http
 {
     /// <summary>
     /// Mine常见文件类型

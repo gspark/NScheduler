@@ -8,7 +8,7 @@
 
 using System.ComponentModel.Composition;
 
-namespace Ywdsoft.Utility.ConfigHandler
+namespace NS.Utility.ConfigHandler.Config
 {
     /// <summary>
     /// MQ消息队列配置信息

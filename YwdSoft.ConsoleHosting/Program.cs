@@ -1,17 +1,19 @@
-﻿using Ywdsoft.Utility;
-using Nancy.Hosting.Self;
-using Owin_Nancy;
-using System;
+﻿using System;
 using System.Diagnostics;
-using Ywdsoft.Utility.Mef;
-using Ywdsoft.Utility.ConfigHandler;
-using Ywdsoft.Utility.Command;
 using System.Runtime.InteropServices;
-using Ywdsoft.Utility.RabbitMQ;
-using Ywdsoft.Utility.Extensions.Xml;
-using YwdSoft.Service;
+using Nancy.Hosting.Self;
+using NS.TaskManagerWeb;
+using NS.Utility.Admin;
+using NS.Utility.Command;
+using NS.Utility.Config;
+using NS.Utility.ConfigHandler;
+using NS.Utility.ConfigHandler.Config;
+using NS.Utility.DB.Xml;
+using NS.Utility.Mef;
+using NS.Utility.Quartz;
+using NS.Utility.RabbitMQ;
 
-namespace Ywdsoft.ConsoleHosting
+namespace NS.ConsoleHosting
 {
     class Program
     {

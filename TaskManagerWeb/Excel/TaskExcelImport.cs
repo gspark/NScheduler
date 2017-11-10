@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System.Data;
 using System.ComponentModel.Composition;
-using Ywdsoft.Utility.Excel;
-using Ywdsoft.Utility.Auth;
-using Ywdsoft.Utility;
+using System.Data;
+using System.IO;
+using System.Linq;
+using NS.Utility.Auth;
+using NS.Utility.Excel;
+using NS.Utility.Quartz;
+using NS.Utility.StaticExtend;
 
-namespace Ywdsoft.Excel
+namespace NS.TaskManagerWeb.Excel
 {
     /// <summary>
     /// 设备批量注册服务

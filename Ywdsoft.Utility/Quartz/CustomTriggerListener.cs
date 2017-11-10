@@ -1,7 +1,7 @@
-﻿using Quartz;
-using System;
+﻿using System;
+using Quartz;
 
-namespace Ywdsoft.Utility.Quartz
+namespace NS.Utility.Quartz
 {
     /// <summary>
     /// 自定义触发器监听

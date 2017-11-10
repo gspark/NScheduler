@@ -5,6 +5,9 @@
  * Created: 2016/2/23 9:00:30 
  */
 
+using System;
+using System.Collections.Generic;
+using System.IO;
 using Nancy;
 using Nancy.Authentication.Forms;
 using Nancy.Bootstrapper;
@@ -15,13 +18,10 @@ using Nancy.Session;
 using Nancy.TinyIoc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using Ywdsoft.Model.Common;
-using Ywdsoft.Utility;
+using NS.Model.Common;
+using NS.Utility.Logger;
 
-namespace Ywdsoft
+namespace NS.TaskManagerWeb
 {
     public class CustomBootstrapper : DefaultNancyBootstrapper
     {

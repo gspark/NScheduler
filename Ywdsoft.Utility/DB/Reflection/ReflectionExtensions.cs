@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 using System.Reflection;
-using System.Collections;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.DB.Reflection
 {
     /// <summary>
     /// 反射优化相关扩展方法

@@ -1,7 +1,7 @@
-using Dapper;
 using System;
+using Dapper;
 
-namespace Ywdsoft.Model.Entity
+namespace NS.Model
 {
     ///<summary>
     ///

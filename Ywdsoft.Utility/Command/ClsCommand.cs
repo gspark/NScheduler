@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 
-namespace Ywdsoft.Utility.Command
+namespace NS.Utility.Command
 {
     /// <summary>
     /// 清屏命令

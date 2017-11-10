@@ -5,7 +5,7 @@
  * 创建日期: 2016/2/23 8:50:22 
  * 博客地址：http://yanweidie.cnblogs.com
  */
-using ICSharpCode.SharpZipLib.Zip;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,8 +13,11 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
+using ICSharpCode.SharpZipLib.Zip;
+using NS.Utility.File;
+using NS.Utility.NVelocity;
 
-namespace Ywdsoft.Utility.EntityCode
+namespace NS.Utility.EntityCode
 {
     /// <summary>
     /// 实体代码生成工具
@@ -62,7 +65,7 @@ namespace Ywdsoft.Utility.EntityCode
         public string GetDotNetType(string sqlTypeString)
         {
             //匹配枚举，防止SQL注入
-            SqlDbType sqlType = (SqlDbType)Enum.Parse(typeof(SqlDbType), sqlTypeString, true);
+            SqlDbType sqlType = (SqlDbType)System.Enum.Parse(typeof(SqlDbType), sqlTypeString, true);
             switch (sqlType)
             {
                 case SqlDbType.VarBinary:

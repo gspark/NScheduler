@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Reflection;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.StaticExtend
 {
     /// <summary>
     /// DataTable和 List集合相互转换
@@ -55,7 +55,7 @@ namespace Ywdsoft.Utility
                         }
                         else if (pro.PropertyType.IsEnum)
                         {
-                            pro.SetValue(t, Convert.ChangeType(value, Enum.GetUnderlyingType(pro.PropertyType)), null);
+                            pro.SetValue(t, Convert.ChangeType(value, System.Enum.GetUnderlyingType(pro.PropertyType)), null);
                         }
                         else
                         {

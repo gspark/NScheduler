@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ywdsoft.Model.Common
+namespace NS.Model.Common
 {
     ///<summary>
     ///标签定义表

@@ -5,17 +5,18 @@
  * 创建日期: 2016/2/23 8:50:22 
  * 博客地址：http://yanweidie.cnblogs.com
  */
+
+using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using Nancy;
 using Nancy.ModelBinding;
-using System.Collections.Generic;
-using System.Linq;
-using Ywdsoft.Model.Common;
-using Ywdsoft.Utility;
-using Ywdsoft.Utility.ConfigHandler;
-using Ywdsoft.Utility.Mef;
+using NS.Model.Common;
+using NS.Utility.ConfigHandler;
+using NS.Utility.Mef;
+using NS.Utility.Tags;
 
-namespace Ywdsoft.Modules
+namespace NS.TaskManagerWeb.Modules
 {
     public class ConfigModule : BaseModule
     {

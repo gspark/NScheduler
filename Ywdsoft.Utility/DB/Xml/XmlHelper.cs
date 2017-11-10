@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Text;
-using System.Xml.Serialization;
 using System.IO;
+using System.Text;
 using System.Xml;
+using System.Xml.Serialization;
 
-namespace Ywdsoft.Utility.Extensions.Xml
+namespace NS.Utility.DB.Xml
 {
     /// <summary>
     /// 用于XML序列化/反序列化的工具类
@@ -105,7 +105,7 @@ namespace Ywdsoft.Utility.Extensions.Xml
 			if( encoding == null )
 				throw new ArgumentNullException("encoding");
 
-			string xml = File.ReadAllText(path, encoding);
+			string xml = System.IO.File.ReadAllText(path, encoding);
 			return XmlDeserialize<T>(xml, encoding);
 		}
 	}

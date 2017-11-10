@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Reflection.Emit;
 using System.Reflection;
+using System.Reflection.Emit;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.DB.Reflection
 {
     internal delegate object CtorDelegate();
 

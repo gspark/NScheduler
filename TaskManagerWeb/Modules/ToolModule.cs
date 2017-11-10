@@ -6,17 +6,18 @@
  * 博客地址：http://yanweidie.cnblogs.com
  */
 
-using Nancy;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using Ywdsoft.Utility;
-using Ywdsoft.Utility.Command;
-using Ywdsoft.Utility.EntityCode;
-using Ywdsoft.Utility.Http;
-using YwdSoft.Service;
+using Nancy;
+using Newtonsoft.Json;
+using NS.Service;
+using NS.Utility.Command;
+using NS.Utility.EntityCode;
+using NS.Utility.Http;
+using NS.Utility.Logger;
+using NS.Utility.Quartz;
 
-namespace Ywdsoft.Modules
+namespace NS.TaskManagerWeb.Modules
 {
     public class ToolModule : BaseModule
     {

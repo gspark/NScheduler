@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ywdsoft.Utility.DB
+namespace NS.Utility.DB
 {
     internal static class ConvertExt
     {
@@ -36,7 +36,7 @@ namespace Ywdsoft.Utility.DB
             }
             if (type.IsEnum)
             {
-                type = Enum.GetUnderlyingType(type);
+                type = System.Enum.GetUnderlyingType(type);
             }
 
             return System.Convert.ChangeType(value, type);

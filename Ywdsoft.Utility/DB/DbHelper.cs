@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
-using System.Text;
-using System.Reflection;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Data.SQLite;
-using System.Data;
-using Ywdsoft.Utility.DB;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using NS.Utility.DB.Reflection;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.DB
 {
     internal static class DbHelper
     {

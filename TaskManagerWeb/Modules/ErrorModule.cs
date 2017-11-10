@@ -7,7 +7,7 @@
 
 using Nancy;
 
-namespace Ywdsoft.Modules
+namespace NS.TaskManagerWeb.Modules
 {
     public class ErrorModule : NancyModule
     {

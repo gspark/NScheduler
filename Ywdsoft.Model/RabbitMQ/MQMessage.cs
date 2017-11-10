@@ -4,10 +4,11 @@
  * Author: 杜冬军
  * Created: 2016/3/17 13:39:17 
  */
+
 using System;
 using System.Collections.Generic;
 
-namespace Ywdsoft.Model.RabbitMQ
+namespace NS.Model.RabbitMQ
 {
     /// <summary>
     /// MQ消息格式实体定义

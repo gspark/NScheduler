@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using NS.Utility.Quartz;
 
-namespace Ywdsoft.Utility.Command
+namespace NS.Utility.Command
 {
     /// <summary>
     /// 退出程序命令

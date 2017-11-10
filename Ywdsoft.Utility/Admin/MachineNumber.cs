@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Management;
-using System.IO;
-using System.Text;
 using System.Diagnostics;
-using Ywdsoft.Utility.ConfigHandler;
+using System.IO;
+using System.Management;
+using System.Text;
+using NS.Utility.ConfigHandler.Config;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Admin
 {
     internal enum WmiType
     {
@@ -26,7 +26,7 @@ namespace Ywdsoft.Utility
 
         static MachineNumber()
         {
-            var names = Enum.GetNames(typeof(WmiType));
+            var names = System.Enum.GetNames(typeof(WmiType));
             foreach (string name in names)
             {
                 WmiDict.Add(name, new ManagementObjectSearcher("SELECT * FROM " + name).Get());

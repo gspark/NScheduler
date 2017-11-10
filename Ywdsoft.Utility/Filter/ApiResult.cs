@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Filter
 {
     /// <summary>
     /// 服务器端接口返回值

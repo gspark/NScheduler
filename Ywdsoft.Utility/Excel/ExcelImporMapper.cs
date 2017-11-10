@@ -1,6 +1,7 @@
 ﻿using System.Collections.Concurrent;
+using NS.Utility.File;
 
-namespace Ywdsoft.Utility.Excel
+namespace NS.Utility.Excel
 {
     /// <summary>
     /// Excel导入数据对应类型枚举

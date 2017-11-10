@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Enum
 {
     /// <summary>
     /// 枚举帮助类
@@ -15,10 +15,10 @@ namespace Ywdsoft.Utility
         /// </summary>
         /// <param name="value">枚举值</param>
         /// <returns>枚举的Description</returns>
-        public static string GetDescription(this Enum value)
+        public static string GetDescription(this System.Enum value)
         {
             Type type = value.GetType();
-            string name = Enum.GetName(type, value);
+            string name = System.Enum.GetName(type, value);
             if (name == null)
             {
                 return null;
@@ -49,15 +49,15 @@ namespace Ywdsoft.Utility
         /// <param name="enumType">枚举类型</param>
         /// <param name="getText">获得值得文本</param>
         /// <returns>以枚举值为key,枚举文本为value的键值对集合</returns>
-        public static Dictionary<int, string> EnumToDictionary(Type enumType, Func<Enum, string> getText)
+        public static Dictionary<int, string> EnumToDictionary(Type enumType, Func<System.Enum, string> getText)
         {
             if (!enumType.IsEnum)
             {
                 throw new ArgumentException("传入的参数必须是枚举类型！", "enumType");
             }
             Dictionary<int, string> enumDic = new Dictionary<int, string>();
-            Array enumValues = Enum.GetValues(enumType);
-            foreach (Enum enumValue in enumValues)
+            Array enumValues = System.Enum.GetValues(enumType);
+            foreach (System.Enum enumValue in enumValues)
             {
                 int key = Convert.ToInt32(enumValue);
                 string value = getText(enumValue);
@@ -75,12 +75,12 @@ namespace Ywdsoft.Utility
         public static T IntToEnum<T>(int value) where T : struct, IConvertible
         {
             Type enumType = typeof(T);
-            if (!Enum.IsDefined(enumType, value))
+            if (!System.Enum.IsDefined(enumType, value))
             {
                 throw new ArgumentException("整形值在相应的枚举里面未定义！");
             }
 
-            return (T)Enum.ToObject(enumType, value);
+            return (T)System.Enum.ToObject(enumType, value);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Ywdsoft.Utility
         /// </summary>
         /// <param name="value">枚举值</param>
         /// <returns>整形</returns>
-        public static int ToInt(this Enum value)
+        public static int ToInt(this System.Enum value)
         {
             return Convert.ToInt32(value);
         }
@@ -109,7 +109,7 @@ namespace Ywdsoft.Utility
         /// </summary>
         /// <param name="value">枚举值</param>
         /// <returns>string</returns>
-        public static string ToIntString(this Enum value)
+        public static string ToIntString(this System.Enum value)
         {
             return Convert.ToInt32(value).ToString();
         }
@@ -123,7 +123,7 @@ namespace Ywdsoft.Utility
         /// <returns>枚举</returns>
         public static T StringToEnum<T>(string value) where T : struct, IConvertible
         {
-            return (T)Enum.Parse(typeof(T), value);
+            return (T)System.Enum.Parse(typeof(T), value);
         }
     }
 }

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NS.Utility.DB;
+using NS.Utility.Filter;
+using NS.Utility.Logger;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Quartz
 {
     /// <summary>
     /// 任务实体

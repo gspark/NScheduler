@@ -7,10 +7,10 @@
 
 using System;
 
-namespace Ywdsoft.Utility.ConfigHandler
+namespace NS.Utility.ConfigHandler
 {
 
-    [AttributeUsageAttribute(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
+    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
     public class ConfigAttribute : Attribute
     {
         /// <summary>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 
-namespace Ywdsoft.Utility.Mef
+namespace NS.Utility.Mef
 {
     public class MefConfig
     {

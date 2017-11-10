@@ -4,9 +4,12 @@ using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
-using Ywdsoft.Utility.ConfigHandler;
+using NS.Utility.ConfigHandler.Config;
+using NS.Utility.File;
+using NS.Utility.Logger;
+using NS.Utility.Zip;
 
-namespace Ywdsoft.Utility.Command
+namespace NS.Utility.Command
 {
     /// <summary>
     /// 日志命令
@@ -106,7 +109,7 @@ namespace Ywdsoft.Utility.Command
             Directory.Delete(desc, true);
             byte[] m_buffer = new byte[BUFFER_SIZE];
             int count = 0;
-            using (FileStream fs = File.OpenRead(FilePath))
+            using (FileStream fs = System.IO.File.OpenRead(FilePath))
             {
                 do
                 {
@@ -114,7 +117,7 @@ namespace Ywdsoft.Utility.Command
                     s.Write(m_buffer, 0, count);
                 } while (count == BUFFER_SIZE);
             }
-            File.Delete(FilePath);
+            System.IO.File.Delete(FilePath);
         }
 
 
@@ -132,7 +135,7 @@ namespace Ywdsoft.Utility.Command
             Directory.Delete(desc, true);
             byte[] m_buffer = new byte[BUFFER_SIZE];
             int count = 0;
-            using (FileStream fs = File.OpenRead(FilePath))
+            using (FileStream fs = System.IO.File.OpenRead(FilePath))
             {
                 do
                 {
@@ -140,7 +143,7 @@ namespace Ywdsoft.Utility.Command
                     s.Write(m_buffer, 0, count);
                 } while (count == BUFFER_SIZE);
             }
-            File.Delete(FilePath);
+            System.IO.File.Delete(FilePath);
         }
     }
 }

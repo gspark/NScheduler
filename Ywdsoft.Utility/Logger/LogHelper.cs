@@ -1,17 +1,17 @@
-﻿using log4net;
-using log4net.Appender;
-using log4net.Core;
-using log4net.Layout;
-using log4net.Repository;
-using System;
-using System.Linq;
+﻿using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
+using log4net;
+using log4net.Appender;
+using log4net.Core;
+using log4net.Layout;
+using log4net.Repository;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Logger
 {
     /// <summary>
     /// 使用LOG4NET记录日志的功能，在WEB.CONFIG里要配置相应的节点

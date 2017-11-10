@@ -4,18 +4,20 @@
  * 创建日期: 2016/2/23 8:50:22 
  * 博客地址：http://yanweidie.cnblogs.com
  */
-using Nancy;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Ywdsoft.Utility.Excel;
+using Nancy;
 using Newtonsoft.Json;
-using Ywdsoft.Utility.Mef;
-using Ywdsoft.Utility;
-using Ywdsoft.Utility.Http;
+using NS.Utility.Enum;
+using NS.Utility.Excel;
+using NS.Utility.Http;
+using NS.Utility.Logger;
+using NS.Utility.Mef;
 
-namespace Ywdsoft.Modules
+namespace NS.TaskManagerWeb.Modules
 {
     public class ExcelModule : BaseModule
     {

@@ -1,13 +1,12 @@
 ﻿using System;
-using System.IO;
 using System.Diagnostics;
-using Microsoft.Win32;
-
+using System.IO;
 using ICSharpCode.SharpZipLib.Checksums;
 using ICSharpCode.SharpZipLib.Zip;
+using Microsoft.Win32;
 
 ///压缩、解压缩类
-namespace Ywdsoft.Utility
+namespace NS.Utility.Zip
 {
     public class SharpZip
     {
@@ -45,7 +44,7 @@ namespace Ywdsoft.Utility
             {
                 Directory.CreateDirectory(dir);
             }
-            using (ZipInputStream s = new ZipInputStream(File.OpenRead(file)))
+            using (ZipInputStream s = new ZipInputStream(System.IO.File.OpenRead(file)))
             {
                 if (!string.IsNullOrEmpty(Password))
                 {
@@ -62,7 +61,7 @@ namespace Ywdsoft.Utility
                     }
                     if (fileName != String.Empty)
                     {
-                        using (FileStream streamWriter = File.Create(dir + theEntry.Name))
+                        using (FileStream streamWriter = System.IO.File.Create(dir + theEntry.Name))
                         {
                             int size = 2048;
                             byte[] data = new byte[2048];
@@ -106,7 +105,7 @@ namespace Ywdsoft.Utility
                     filenames = Directory.GetFiles(FolderToZip);
                     foreach (string file in filenames)
                     {
-                        fs = File.OpenRead(file);
+                        fs = System.IO.File.OpenRead(file);
                         byte[] buffer = new byte[fs.Length];
                         fs.Read(buffer, 0, buffer.Length);
                         entry = new ZipEntry(Path.Combine(ParentFolderName, Path.GetFileName(FolderToZip) + "/" + Path.GetFileName(file)));
@@ -161,7 +160,7 @@ namespace Ywdsoft.Utility
                 {
                     return false;
                 }
-                ZipOutputStream s = new ZipOutputStream(File.Create(ZipedFile));
+                ZipOutputStream s = new ZipOutputStream(System.IO.File.Create(ZipedFile));
                 s.SetLevel(level);
                 res = ZipFileDictory(FolderToZip, s, "");
                 s.Finish();
@@ -176,7 +175,7 @@ namespace Ywdsoft.Utility
             /// <param name="ZipedFile">压缩后生成的压缩文件名</param>
             private static bool ZipFile(string FileToZip, string ZipedFile, int level)
             {
-                if (!File.Exists(FileToZip))
+                if (!System.IO.File.Exists(FileToZip))
                 {
                     throw new System.IO.FileNotFoundException("指定要压缩的文件: " + FileToZip + " 不存在!");
                 }
@@ -186,12 +185,12 @@ namespace Ywdsoft.Utility
                 bool res = true;
                 try
                 {
-                    ZipFile = File.OpenRead(FileToZip);
+                    ZipFile = System.IO.File.OpenRead(FileToZip);
                     byte[] buffer = new byte[ZipFile.Length];
                     ZipFile.Read(buffer, 0, buffer.Length);
                     ZipFile.Close();
 
-                    ZipFile = File.Create(ZipedFile);
+                    ZipFile = System.IO.File.Create(ZipedFile);
                     ZipStream = new ZipOutputStream(ZipFile);
                     ZipEntry = new ZipEntry(Path.GetFileName(FileToZip));
                     ZipStream.PutNextEntry(ZipEntry);
@@ -238,7 +237,7 @@ namespace Ywdsoft.Utility
                 {
                     return ZipFileDictory(FileToZip, ZipedFile, level);
                 }
-                else if (File.Exists(FileToZip))
+                else if (System.IO.File.Exists(FileToZip))
                 {
                     return ZipFile(FileToZip, ZipedFile, level);
                 }
@@ -255,7 +254,7 @@ namespace Ywdsoft.Utility
             /// <param name="ZipedFolder">解压目标存放目录</param>
             public static void UnZip(string FileToUpZip, string ZipedFolder)
             {
-                if (!File.Exists(FileToUpZip))
+                if (!System.IO.File.Exists(FileToUpZip))
                 {
                     return;
                 }
@@ -269,7 +268,7 @@ namespace Ywdsoft.Utility
                 FileStream streamWriter = null;
                 try
                 {
-                    s = new ZipInputStream(File.OpenRead(FileToUpZip));
+                    s = new ZipInputStream(System.IO.File.OpenRead(FileToUpZip));
                     while ((theEntry = s.GetNextEntry()) != null)
                     {
                         if (theEntry.Name != String.Empty)
@@ -280,7 +279,7 @@ namespace Ywdsoft.Utility
                                 Directory.CreateDirectory(fileName);
                                 continue;
                             }
-                            streamWriter = File.Create(fileName);
+                            streamWriter = System.IO.File.Create(fileName);
                             int size = 2048;
                             byte[] data = new byte[2048];
                             while (true)

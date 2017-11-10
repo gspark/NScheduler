@@ -9,8 +9,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using NS.Utility.DB.Reflection;
 
-namespace Ywdsoft.Utility.ConfigHandler
+namespace NS.Utility.ConfigHandler
 {
     /// <summary>
     /// 参数配置缓存
@@ -69,7 +70,7 @@ namespace Ywdsoft.Utility.ConfigHandler
                                 configAttr.Key = prop.Name;
                             }
                             //设置值类型
-                            if (!Enum.IsDefined(ValueType, configAttr.ValueType))
+                            if (!System.Enum.IsDefined(ValueType, configAttr.ValueType))
                             {
                                 SetConfigValueType(configAttr, prop.PropertyType);
                             }

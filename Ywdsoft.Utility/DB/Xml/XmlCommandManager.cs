@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Runtime.CompilerServices;
 using System.IO;
+using System.Runtime.CompilerServices;
+using System.Text;
 using System.Web;
 
-
-namespace Ywdsoft.Utility.Extensions.Xml
+namespace NS.Utility.DB.Xml
 {
     /// <summary>
     /// 用于维护配置文件中数据库访问命令的管理类
@@ -94,7 +93,7 @@ namespace Ywdsoft.Utility.Extensions.Xml
             {
                 if (e.ChangeType == WatcherChangeTypes.Created)
                 {
-                    if (File.GetAttributes(e.FullPath) != FileAttributes.Directory)
+                    if (System.IO.File.GetAttributes(e.FullPath) != FileAttributes.Directory)
                     {
                         CacheUpdateCallback(e.FullPath);
                     }
@@ -102,7 +101,7 @@ namespace Ywdsoft.Utility.Extensions.Xml
                 else if (e.ChangeType == WatcherChangeTypes.Changed)
                 {
 
-                    if (File.GetAttributes(e.FullPath) == FileAttributes.Directory)
+                    if (System.IO.File.GetAttributes(e.FullPath) == FileAttributes.Directory)
                     {
                         return;
                     }

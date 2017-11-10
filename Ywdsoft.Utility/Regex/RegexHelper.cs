@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Regex
 {
     public class RegexHelper
     {
@@ -11,7 +11,7 @@ namespace Ywdsoft.Utility
         /// <returns></returns>
         public static bool IsMobile(string input)
         {
-            if (!Regex.IsMatch(input, @"^[1][1-9]\d{9}$", RegexOptions.IgnoreCase))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(input, @"^[1][1-9]\d{9}$", RegexOptions.IgnoreCase))
                 return false;
             if (input.Length == 11 && (input.StartsWith("13") || input.StartsWith("14") || input.StartsWith("15") || input.StartsWith("18")))
             {
@@ -31,7 +31,7 @@ namespace Ywdsoft.Utility
             {
                 string EmailReg = @"^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$";
 
-                return Regex.IsMatch(input, EmailReg, RegexOptions.IgnoreCase);
+                return System.Text.RegularExpressions.Regex.IsMatch(input, EmailReg, RegexOptions.IgnoreCase);
             }
             return false;
         }
@@ -46,7 +46,7 @@ namespace Ywdsoft.Utility
             if (string.IsNullOrEmpty(input))
                 return false;
 
-            Regex rx = new Regex("^[\u4e00-\u9fa5]$");
+            System.Text.RegularExpressions.Regex rx = new System.Text.RegularExpressions.Regex("^[\u4e00-\u9fa5]$");
             for (int i = 0; i < input.Length; i++)
             {
                 if (!rx.IsMatch(input[i].ToString()))
@@ -65,7 +65,7 @@ namespace Ywdsoft.Utility
             if (string.IsNullOrEmpty(input) || input.Length < 7 || input.Length > 15)
                 return false;
 
-            Regex regex = new Regex(@"^([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])\.([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])\.([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])\.([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])$", RegexOptions.IgnoreCase);
+            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"^([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])\.([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])\.([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])\.([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])$", RegexOptions.IgnoreCase);
             return regex.IsMatch(input);
         }
     }

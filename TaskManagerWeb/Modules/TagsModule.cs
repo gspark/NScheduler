@@ -5,11 +5,12 @@
  * 创建日期: 2016/2/23 8:50:22 
  * 博客地址：http://yanweidie.cnblogs.com
  */
-using Ywdsoft.Utility;
-using Nancy;
-using Ywdsoft.Utility.Mef;
 
-namespace Ywdsoft.Modules
+using Nancy;
+using NS.Utility.Mef;
+using NS.Utility.Tags;
+
+namespace NS.TaskManagerWeb.Modules
 {
     public class TagsModule : BaseModule
     {

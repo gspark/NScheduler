@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Ywdsoft.Utility.Command
+namespace NS.Utility.Command
 {
     /// <summary>
     /// 控制台提供命令执行接口

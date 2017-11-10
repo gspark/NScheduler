@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Xml.Serialization;
-using System.Xml.Schema;
 using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
 
-namespace Ywdsoft.Utility.Extensions.Xml
+namespace NS.Utility.DB.Xml
 {
     /// <summary>
     /// 支持CDATA序列化的包装类

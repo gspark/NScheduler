@@ -4,7 +4,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Web;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.File
 {
     /// <summary>
     /// 文件相关助手类
@@ -110,7 +110,7 @@ namespace Ywdsoft.Utility
                 if (!Directory.Exists(destDirName))
                 {
                     Directory.CreateDirectory(destDirName);
-                    File.SetAttributes(destDirName, File.GetAttributes(sourceDirName));
+                    System.IO.File.SetAttributes(destDirName, System.IO.File.GetAttributes(sourceDirName));
 
                 }
 
@@ -120,10 +120,10 @@ namespace Ywdsoft.Utility
                 string[] files = Directory.GetFiles(sourceDirName);
                 foreach (string file in files)
                 {
-                    if (File.Exists(destDirName + Path.GetFileName(file)))
+                    if (System.IO.File.Exists(destDirName + Path.GetFileName(file)))
                         continue;
-                    File.Copy(file, destDirName + Path.GetFileName(file), true);
-                    File.SetAttributes(destDirName + Path.GetFileName(file), FileAttributes.Normal);
+                    System.IO.File.Copy(file, destDirName + Path.GetFileName(file), true);
+                    System.IO.File.SetAttributes(destDirName + Path.GetFileName(file), FileAttributes.Normal);
                 }
 
                 string[] dirs = Directory.GetDirectories(sourceDirName);
@@ -161,10 +161,10 @@ namespace Ywdsoft.Utility
                 string[] files = list.ToArray();
                 foreach (string file in files)
                 {
-                    if (File.Exists(destDirName + Path.GetFileName(file)))
+                    if (System.IO.File.Exists(destDirName + Path.GetFileName(file)))
                         continue;
-                    File.Copy(file, destDirName + Path.GetFileName(file), true);
-                    File.SetAttributes(destDirName + Path.GetFileName(file), FileAttributes.Normal);
+                    System.IO.File.Copy(file, destDirName + Path.GetFileName(file), true);
+                    System.IO.File.SetAttributes(destDirName + Path.GetFileName(file), FileAttributes.Normal);
                 }
             }
             catch (Exception ex)

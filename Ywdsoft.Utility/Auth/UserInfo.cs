@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Ywdsoft.Utility.Auth
+namespace NS.Utility.Auth
 {
     /// <summary>
     /// 用户信息

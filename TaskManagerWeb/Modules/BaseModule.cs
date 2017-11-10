@@ -7,10 +7,10 @@
 
 using Nancy;
 using Nancy.Security;
-using Ywdsoft.Model.Common;
-using Ywdsoft.Utility.ConfigHandler;
+using NS.Model.Common;
+using NS.Utility.ConfigHandler.Config;
 
-namespace Ywdsoft.Modules
+namespace NS.TaskManagerWeb.Modules
 {
     public class BaseModule : NancyModule
     {

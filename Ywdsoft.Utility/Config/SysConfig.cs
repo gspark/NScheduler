@@ -1,4 +1,4 @@
-﻿namespace Ywdsoft.Utility
+﻿namespace NS.Utility.Config
 {
     /// <summary>
     /// 缓存系统所有配置信息，以键值对形式存在

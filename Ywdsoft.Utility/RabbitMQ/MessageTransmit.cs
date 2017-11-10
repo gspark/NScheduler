@@ -1,9 +1,10 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using Newtonsoft.Json.Linq;
+using NS.Utility.Logger;
 
-namespace Ywdsoft.Utility.RabbitMQ
+namespace NS.Utility.RabbitMQ
 {
     [Export]
     public class MessageTransmit

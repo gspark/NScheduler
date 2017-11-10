@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.StaticExtend
 {
     public static class StringExt
     {

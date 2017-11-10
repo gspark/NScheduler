@@ -5,10 +5,10 @@
  * Created: 2015/12/11 11:08:57 
  */
 
-using Newtonsoft.Json;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Filter
 {
     /// <summary>
     /// 列表页面进行查询的参数

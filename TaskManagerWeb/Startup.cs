@@ -1,10 +1,11 @@
-﻿using Nancy.Hosting.Self;
-using System;
+﻿using System;
 using System.Net;
-using Ywdsoft.Utility;
-using Ywdsoft.Utility.ConfigHandler;
+using Nancy.Hosting.Self;
+using NS.Utility.ConfigHandler;
+using NS.Utility.ConfigHandler.Config;
+using NS.Utility.Logger;
 
-namespace Owin_Nancy
+namespace NS.TaskManagerWeb
 {
     public class Startup
     {

@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Text;
-using NVelocity.App;
-using Commons.Collections;
-using NVelocity.Runtime;
-using NVelocity;
-using NVelocity.Context;
-using System.IO;
 using System.Collections;
+using System.IO;
+using System.Text;
+using Commons.Collections;
+using NVelocity;
+using NVelocity.App;
+using NVelocity.Context;
+using NVelocity.Runtime;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.NVelocity
 {
     /// <summary>
     /// NVelocity读取模版文件生成

@@ -1,10 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Text;
+using NS.Utility.DB;
+using NS.Utility.Enum;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Filter
 {
 
     /// <summary>
@@ -175,7 +177,7 @@ namespace Ywdsoft.Utility
                         continue;
                     }
                     //匹配枚举，防止SQL注入
-                    Operator operatorEnum = (Operator)Enum.Parse(typeof(Operator), item.Operator, true);
+                    Operator operatorEnum = (Operator)System.Enum.Parse(typeof(Operator), item.Operator, true);
 
                     //跳过字段值为空的
                     if (operatorEnum != Operator.Null && operatorEnum != Operator.NotNull && string.IsNullOrEmpty(item.FieldValue))

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Diagnostics;
-using Ywdsoft.Utility.ConfigHandler;
+using NS.Utility.ConfigHandler.Config;
 
-namespace Ywdsoft.Utility.Command
+namespace NS.Utility.Command
 {
     /// <summary>
     /// 打开监听端口网页命令

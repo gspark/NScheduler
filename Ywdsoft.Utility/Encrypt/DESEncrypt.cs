@@ -2,7 +2,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Encrypt
 {
     /// <summary>
     /// DESº”√‹/Ω‚√‹¿‡°£

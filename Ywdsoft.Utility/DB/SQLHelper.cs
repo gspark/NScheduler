@@ -1,8 +1,10 @@
 ﻿using System;
-using System.Data;
 using System.Collections.Generic;
+using System.Data;
+using NS.Utility.Config;
+using NS.Utility.StaticExtend;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.DB
 {
     /// <summary> 
     /// SqlServer数据访问接口实现

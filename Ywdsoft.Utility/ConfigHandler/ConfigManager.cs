@@ -10,9 +10,11 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
 using System.Reflection;
-using Ywdsoft.Utility;
+using NS.Utility.DB;
+using NS.Utility.Filter;
+using NS.Utility.Logger;
 
-namespace Ywdsoft.Utility.ConfigHandler
+namespace NS.Utility.ConfigHandler
 {
     /// <summary>
     /// 配置管理,提供配置初始化，配置信息读取保存方法

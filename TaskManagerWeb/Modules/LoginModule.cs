@@ -6,16 +6,17 @@
  * 博客地址：http://yanweidie.cnblogs.com
  */
 
+using System;
 using Nancy;
 using Nancy.Authentication.Forms;
 using Nancy.Extensions;
-using System;
-using Ywdsoft.Model.Common;
-using Ywdsoft.Utility;
-using Ywdsoft.Utility.ConfigHandler;
-using Ywdsoft.Utility.Mef;
+using NS.Model.Common;
+using NS.Utility.Auth;
+using NS.Utility.ConfigHandler.Config;
+using NS.Utility.Encrypt;
+using NS.Utility.Mef;
 
-namespace Ywdsoft.Modules
+namespace NS.TaskManagerWeb.Modules
 {
     public class LoginModule : NancyModule
     {

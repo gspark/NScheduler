@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Ywdsoft.Utility.DB;
-using Ywdsoft.Utility.Extensions.Xml;
+using NS.Utility.DB;
+using NS.Utility.DB.Xml;
 
-namespace YwdSoft.Service
+namespace NS.Service
 {
     /// <summary>
     /// Sql Server表服务

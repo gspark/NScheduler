@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.DB.Reflection
 {
     #region 委托定义
 

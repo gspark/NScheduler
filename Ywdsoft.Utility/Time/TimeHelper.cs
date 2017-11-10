@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Time
 {
     public static class TimeHelper
     {

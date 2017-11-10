@@ -1,8 +1,8 @@
 ﻿using System;
-using Ywdsoft.Model.Entity;
-using Ywdsoft.Utility.DB;
+using NS.Model;
+using NS.Utility.DB;
 
-namespace YwdSoft.Service
+namespace NS.Service
 {
     public class DapperDemoService
     {

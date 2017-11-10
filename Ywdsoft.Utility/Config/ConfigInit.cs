@@ -1,9 +1,10 @@
 ﻿using System;
-using System.IO;
 using System.Reflection;
 using System.Xml;
+using NS.Utility.Encrypt;
+using NS.Utility.File;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Config
 {
     /// <summary>
     /// 配置文件信息初始化,为了解决团队开发中,每个人的config文件不一致,而需要修改app.config或者web.config
@@ -34,7 +35,7 @@ namespace Ywdsoft.Utility
             try
             {
                 doc = new XmlDocument();
-                if (!File.Exists(ConfigPath))
+                if (!System.IO.File.Exists(ConfigPath))
                 {
                     return;
                 }
@@ -64,7 +65,7 @@ namespace Ywdsoft.Utility
         /// <returns>值</returns>
         private static string GetConfigValue(PathMapAttribute PathMap)
         {
-            if (!File.Exists(ConfigPath))
+            if (!System.IO.File.Exists(ConfigPath))
             {
                 return "";
             }
@@ -73,7 +74,7 @@ namespace Ywdsoft.Utility
             XmlAttribute attr = null;
             try
             {
-                if (File.Exists(ConfigLocalPath))
+                if (System.IO.File.Exists(ConfigLocalPath))
                 {
                     //读取本地配置文件
                     doc.Load(ConfigLocalPath);

@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using NS.Utility.Filter;
 
-namespace Ywdsoft.Utility.Excel
+namespace NS.Utility.Excel
 {
     /// <summary>
     /// Execl相关信息

@@ -5,12 +5,16 @@
  * 创建日期: 2016/2/23 8:50:22 
  * 博客地址：http://yanweidie.cnblogs.com
  */
-using Nancy;
-using Ywdsoft.Utility;
-using Ywdsoft.Utility.ConfigHandler;
-using Ywdsoft.Utility.Mef;
 
-namespace Ywdsoft.Modules
+using Nancy;
+using NS.Utility.Admin;
+using NS.Utility.Auth;
+using NS.Utility.ConfigHandler.Config;
+using NS.Utility.Encrypt;
+using NS.Utility.Filter;
+using NS.Utility.Mef;
+
+namespace NS.TaskManagerWeb.Modules
 {
     public class HomeModule : BaseModule
     {

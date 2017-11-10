@@ -1,4 +1,4 @@
-﻿namespace Ywdsoft.Model.RabbitMQ
+﻿namespace NS.Model.RabbitMQ
 {
     public class LogMessage : BaseMessage
     {

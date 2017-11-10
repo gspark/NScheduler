@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace Ywdsoft.Utility.Extensions.Xml
+namespace NS.Utility.DB.Xml
 {
     /// <summary>
     /// 表示*.config文件中的一个XmlCommand配置项。

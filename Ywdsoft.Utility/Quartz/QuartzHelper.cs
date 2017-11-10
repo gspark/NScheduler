@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using Quartz;
 using System.Collections.Specialized;
+using System.Linq;
+using System.Reflection;
+using NS.Utility.ConfigHandler.Config;
+using NS.Utility.DB.Reflection;
+using NS.Utility.File;
+using NS.Utility.Logger;
+using Quartz;
 using Quartz.Impl;
+using Quartz.Impl.Matchers;
 using Quartz.Impl.Triggers;
 using Quartz.Spi;
-using System.Reflection;
-using Ywdsoft.Utility.Quartz;
-using Quartz.Impl.Matchers;
-using System.IO;
-using Ywdsoft.Utility.ConfigHandler;
 
-namespace Ywdsoft.Utility
+namespace NS.Utility.Quartz
 {
     /// <summary>
     /// 任务处理帮助类
@@ -243,7 +244,7 @@ namespace Ywdsoft.Utility
                 if (!AssemblyDict.TryGetValue(HashCode, out assembly))
                 {
                     //修改程序集Assembly.LoadForm 导致程序集被占用问题
-                    assembly = Assembly.Load(File.ReadAllBytes(assemblyPath));
+                    assembly = Assembly.Load(System.IO.File.ReadAllBytes(assemblyPath));
                     AssemblyDict[HashCode] = assembly;
                 }
                 Type type = assembly.GetType(className, true, true);
