@@ -1,11 +1,9 @@
-﻿using Ywdsoft.Utility;
-using Quartz;
-using System;
-using Ywdsoft.Utility.RabbitMQ;
+﻿using System;
 using System.Collections.Generic;
-using Ywdsoft.Model.RabbitMQ;
+using Quartz;
+using NS.Model.RabbitMQ;
 
-namespace Ywdsoft.Task.TaskSet
+namespace NS.Task.TaskSet
 {
     /// <summary>
     ///  

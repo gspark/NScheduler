@@ -1,6 +1,4 @@
-﻿using Ywdsoft.Utility;
-
-namespace Ywdsoft.Task.Utils
+﻿namespace NS.Task.Utils
 {
     /// <summary>
     /// 获取任务记录日志ILog

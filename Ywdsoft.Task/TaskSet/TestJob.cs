@@ -1,8 +1,7 @@
-﻿using Ywdsoft.Utility;
+﻿using System;
 using Quartz;
-using System;
 
-namespace Ywdsoft.Task.TaskSet
+namespace NS.Task.TaskSet
 {
     /// <summary>
     /// 测试任务
