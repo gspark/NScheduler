@@ -58,8 +58,10 @@ namespace CsharpHttpHelper.Helper
 			string result;
 			try
 			{
-				IPHostEntry hostByName = Dns.GetHostByName(HttpUrlHelper.GetUrlHost(url));
-				result = hostByName.AddressList[0].ToString();
+//                IPHostEntry hostByName = Dns.GetHostByName(HttpUrlHelper.GetUrlHost(url));
+                // GetHostByName obsolete
+                IPHostEntry hostByName = Dns.GetHostEntry(HttpUrlHelper.GetUrlHost(url));
+                result = hostByName.AddressList[0].ToString();
 			}
 			catch
 			{
