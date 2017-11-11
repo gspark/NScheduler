@@ -154,7 +154,7 @@ rd/s/q $(TargetDir)Task
 rd/s/q $(TargetDir)XmlCommand
 xcopy $(SolutionDir)NS.TaskManagerWeb\Content\*.* $(TargetDir)Content\ /s/d/r/y
 xcopy $(SolutionDir)NS.TaskManagerWeb\Views\*.* $(TargetDir)Views\ /s/d/r/y
-xcopy $(SolutionDir)NS.Task\$(OutDir)Ywdsoft.Task.dll $(TargetDir)Task\ /s/d/r/y
+xcopy $(SolutionDir)NS.Task\$(OutDir)NS.Task.dll $(TargetDir)Task\ /s/d/r/y
 xcopy $(SolutionDir)NS.XmlCommand\*.config $(TargetDir)XmlCommand\ /s/d/r/y
 </PostBuildEvent>
   </PropertyGroup>
