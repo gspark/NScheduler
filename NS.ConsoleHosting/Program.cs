@@ -75,7 +75,7 @@ namespace NS.ConsoleHosting
                     Console.WriteLine("系统已启动，当前监听站点地址:{0}", url);
 
                     //4.消息队列启动
-                    RabbitMQClient.InitClient();
+                    //RabbitMQClient.InitClient();
 
                     //5.系统命令初始化
                     CommandHelp.Init();

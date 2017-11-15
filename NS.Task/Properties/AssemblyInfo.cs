@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Ywdsoft.Task")]
+[assembly: AssemblyTitle("NS.Task")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("焰尾迭：http://yanweidie.cnblogs.com")]
-[assembly: AssemblyProduct("Ywdsoft.Task")]
+[assembly: AssemblyProduct("NS.Task")]
 [assembly: AssemblyCopyright("Copyright © 焰尾迭 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
