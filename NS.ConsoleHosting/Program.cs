@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.ServiceProcess;
 using Nancy.Hosting.Self;
 using NS.TaskManagerWeb;
 using NS.Utility.Admin;
@@ -15,6 +16,51 @@ using NS.Utility.RabbitMQ;
 
 namespace NS.ConsoleHosting
 {
+    class NsService : ServiceBase
+    {
+        protected override void OnStart(string[] args)
+        {
+            DoStart();
+        }
+
+        protected override void OnStop()
+        {
+        }
+
+        public NsService()
+        {
+            this.ServiceName = "NsService";
+        }
+
+        public static void DoStart()
+        {
+            //1.MEF初始化
+            MefConfig.Init();
+
+            //2.数据库初始化连接
+            ConfigInit.InitConfig();
+
+            //3.系统参数配置初始化
+            ConfigManager configManager = MefConfig.TryResolve<ConfigManager>();
+            configManager.Init();
+
+            //4.任务启动
+            QuartzHelper.InitScheduler();
+            QuartzHelper.StartScheduler();
+
+            //5.加载SQL信息到缓存中
+            XmlCommandManager.LoadCommnads(SysConfig.XmlCommandFolder);
+
+            //启动站点
+            Startup.Start(SystemConfig.WebPort);
+
+            //6.消息队列启动
+            //RabbitMQClient.InitClient();
+        }
+
+    }
+
+
     class Program
     {
         public delegate bool ControlCtrlDelegate(int CtrlType);
@@ -35,7 +81,14 @@ namespace NS.ConsoleHosting
 
         static void Main(string[] args)
         {
-            AdminRun.Run();
+            startConsole();
+            //ServiceBase.Run(new NsService());
+        }
+
+        private static void startConsole()
+        {
+            // 注释后用管理员权限启动vs可debug
+            //AdminRun.Run();
 
             if (!SetConsoleCtrlHandler(cancelHandler, true))
             {
@@ -43,43 +96,24 @@ namespace NS.ConsoleHosting
             }
             try
             {
-                //1.MEF初始化
-                MefConfig.Init();
-
-                //2.数据库初始化连接
-                ConfigInit.InitConfig();
-
-                //3.系统参数配置初始化
-                ConfigManager configManager = MefConfig.TryResolve<ConfigManager>();
-                configManager.Init();
-
-                Console.Title = SystemConfig.ProgramName;
-                Console.CursorVisible = false; //隐藏光标
-
-                //4.任务启动
-                QuartzHelper.InitScheduler();
-                QuartzHelper.StartScheduler();
-
-                //5.加载SQL信息到缓存中
-                XmlCommandManager.LoadCommnads(SysConfig.XmlCommandFolder);
+                NsService.DoStart();
 
                 //测试dapper orm框架
                 //DapperDemoService.Test();
 
-                //启动站点
-                using (NancyHost host = Startup.Start(SystemConfig.WebPort))
-                {
-                    //调用系统默认的浏览器   
-                    string url = string.Format("http://127.0.0.1:{0}", SystemConfig.WebPort);
-                    Process.Start(url);
-                    Console.WriteLine("系统已启动，当前监听站点地址:{0}", url);
+                Console.Title = SystemConfig.ProgramName;
+                Console.CursorVisible = false; //隐藏光标 
 
-                    //4.消息队列启动
-                    //RabbitMQClient.InitClient();
+                //调用系统默认的浏览器   
+                string url = string.Format("http://127.0.0.1:{0}", SystemConfig.WebPort);
+                Process.Start(url);
+                Console.WriteLine("系统已启动，当前监听站点地址:{0}", url);
 
-                    //5.系统命令初始化
-                    CommandHelp.Init();
-                }
+                //4.消息队列启动
+                //RabbitMQClient.InitClient();
+
+                //5.系统命令初始化
+                CommandHelp.Init();
             }
             catch (Exception ex)
             {
